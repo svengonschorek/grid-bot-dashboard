@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Binance Live Data</title>
+        <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    </head>
+</html>
+
+<body>
+    <h1>Solana Grid Trading</h1>
+    <div id="wrapper">
+        <div id="chart"></div>
+        <script src="{{ url_for('static', filename='chart.js') }}"></script>
+        <div id="table_wrapper">
+            <h3>Last 24h Trades</h3>
+            <table id="table"></table>
+        </div>
+        <script src="{{ url_for('static', filename='table.js') }}"></script>
+    </div>
+</body>
