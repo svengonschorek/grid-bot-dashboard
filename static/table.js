@@ -33,5 +33,5 @@ fetch('/trade_history')
                 tr.appendChild(td2);
             }
         }
-        myTableDiv.appendChild(table);
+        table.appendChild(table);
     })
