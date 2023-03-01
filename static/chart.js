@@ -1,5 +1,6 @@
 var chart = LightweightCharts.createChart(document.getElementById('chart'), {
-    autoSize: true,
+    width: 0,
+    height: 0,
     crosshair: {
         mode: LightweightCharts.CrosshairMode.Normal,
     },

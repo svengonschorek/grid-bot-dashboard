@@ -38,6 +38,7 @@ td {
 @media (min-width: 800px) {
     #chart {
         width: 75%;
+        height: 90%;
         float:left;
     }
     #table_wrapper {
