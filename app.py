@@ -31,7 +31,7 @@ def history():
 
     return jsonify(processed_candlesticks)
 
-@app.route('/trades_history')
+@app.route('/trade_history')
 def trade_history():
     startTime = int(((
         datetime.datetime.utcnow() - datetime.timedelta(days=1)

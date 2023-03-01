@@ -1,4 +1,4 @@
-# binance-live_dashboard
+# binance-live-dashboard
 Live data visualization of binance grid trading bot on Solana.
 
 # Getting started

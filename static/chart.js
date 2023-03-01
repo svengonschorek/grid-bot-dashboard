@@ -18,7 +18,7 @@ var chart = LightweightCharts.createChart(document.getElementById('chart'), {
 
 var candleSeries = chart.addCandlestickSeries();
 
-fetch('http://localhost:5000/history')
+fetch('/history')
 	.then((r) => r.json())
 	.then((response) => {
 		candleSeries.setData(response);
@@ -41,7 +41,7 @@ binanceSocket.onmessage = function (event) {
 }
 
 var markers = [];
-fetch('http://localhost:5000/trades_history')
+fetch('/trade_history')
     .then((r) => r.json())
     .then((response) => {
         for (let i=0; i<response.length; i++) {

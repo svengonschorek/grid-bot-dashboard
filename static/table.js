@@ -1,6 +1,6 @@
 
 var trades = [];
-fetch('http://localhost:5000/trades_history')
+fetch('/trade_history')
     .then((r) => r.json())
     .then((response) => {
         var table = document.getElementById('table');
