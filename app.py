@@ -3,6 +3,7 @@ from binance.client import Client
 
 import os
 import datetime
+import pandas as pd
 
 app = Flask(__name__)
 
@@ -50,5 +51,8 @@ def trade_history():
         }
     
         processed_trades.append(tradepoint)
+    
+    df_trades = pd.DataFrame(processed_trades)
+    agg_trades = df_trades.groupby(["time", "buy", "price"]).agg("sum").reset_index()
 
-    return jsonify(processed_trades)
+    return agg_trades.to_json(orient="records")
