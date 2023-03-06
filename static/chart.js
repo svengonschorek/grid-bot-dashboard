@@ -48,19 +48,19 @@ fetch('/trade_history')
         for (let i=0; i<response.length; i++) {
             if (response[i].buy) {
                 markers.push({
-                    time: response[i].time,
+                    time: response[i].time - 300,
                     position: 'belowBar',
                     color: '#2196F3',
                     shape: 'arrowUp',
-                    text: 'Buy @ ' + response[i].price,
+                    text: response[i].qty.substring(0, 4) + 'x Buy @ ' + response[i].price,
                 });
             } else {
                 markers.push({
-                    time: response[i].time,
+                    time: response[i].time - 300,
                     position: 'aboveBar',
                     color: '#e91e63',
                     shape: 'arrowDown',
-                    text: 'Sell @ ' + response[i].price,
+                    text: response[i].qty.substring(0, 4) + 'x Sell @ ' + response[i].price,
                 });
             }
         }

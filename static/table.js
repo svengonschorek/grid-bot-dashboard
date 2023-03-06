@@ -6,7 +6,6 @@ fetch('/trade_history')
         var table = document.getElementById('table');
   
         var tableBody = document.createElement('TBODY');
-        table.appendChild(tableBody);
 
         for (var i = response.length - 1; i >= 0; i--) {
             var tr = document.createElement('TR');
@@ -33,5 +32,5 @@ fetch('/trade_history')
                 tr.appendChild(td2);
             }
         }
-        table.appendChild(table);
+        table.appendChild(tableBody);
     })
