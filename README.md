@@ -9,8 +9,6 @@ To start application locally run:
 
 The dashboad will be displayed on localhost:5000
 
-Result can be seen on:
-(http://solanagridbot-env.eba-543bxpm6.eu-central-1.elasticbeanstalk.com/)
 
 # Environment variables
 The API needs the environment variables connect to binance
