@@ -53,6 +53,10 @@ def trade_history():
         processed_trades.append(tradepoint)
     
     df_trades = pd.DataFrame(processed_trades)
-    agg_trades = df_trades.groupby(["time", "buy", "price"]).agg("sum").reset_index()
+    if not df_trades.empty:
+        print(df_trades)
+        agg_trades = df_trades.groupby(["time", "buy", "price"]).agg("sum").reset_index()
+    else:
+        agg_trades = pd.DataFrame()
 
     return agg_trades.to_json(orient="records")
