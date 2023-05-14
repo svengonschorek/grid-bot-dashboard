@@ -13,4 +13,4 @@ The dashboad will be displayed on localhost:5000
 # Environment variables
 The API needs the environment variables connect to binance
 - BINANCE_API_KEY
-- BINANCE_API_KEY
+- BINANACE_API_SECRET
